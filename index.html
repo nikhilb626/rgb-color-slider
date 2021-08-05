@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: black;
+
+    }
+    .container{
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        padding: 20px 0;
+        transform: translate(-50%,-50%);
+        box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 5px;
+        display: grid;
+        justify-items: center;
+
+    }
+
+    .wrapper{
+        width: 100%;
+        text-align: center;
+    }
+    input[type='range']{
+        display: inline-block;
+        width: 80%;
+        margin-left: 10px;
+        margin-top: 25px;
+
+    }
+    span{
+        display: inline-block;
+        text-align: center;
+        margin: 20px 0;
+        background: #0075ff;
+        color: white;
+        padding: 10px 30px;
+        font-size: 18px;
+        letter-spacing: 5px;
+        border-radius: 2px;
+        box-sizing: border-box;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            R<input type="range" min="0" max="255" value="0" id="red" oninput="colors()">
+        </div>
+        <div class="wrapper">
+            G<input type="range" min="0" max="255" value="0" id="green" oninput="colors()">
+        </div>
+        <div class="wrapper">
+            B<input type="range" min="0" max="255" value="0" id="blue" oninput="colors()">
+        </div>
+        <span id="output">rgb(0,0,0)</span>
+    </div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
